@@ -1,0 +1,24 @@
+This is a Debian binary package to be installed on a Debian family Linux system,
+64 bits platform.
+
+To install the turnserver with all the necessary packages,
+with the help of gdebi tool, type:
+
+$ sudo apt-get update
+$ sudo apt-get install gdebi-core
+$ sudo gdebi coturn*.deb
+
+(to install the bare package without any dependencies, type:
+
+$ sudo dpkg -i coturn_*_*.deb)
+
+After the install, read the documentation in /usr/share/doc/coturn directory.
+
+All binaries will be installed in /usr/bin/ directory. 
+The turnserver.conf config file is in /etc directory. 
+The turndb SQLite default empty database is in /var/lib/turn directory.
+
+The service start-up control scripts will be in /etc/init.d/coturn and
+in /etc/defaults/coturn files.
+
+
